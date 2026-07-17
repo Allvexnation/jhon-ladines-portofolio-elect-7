@@ -1,0 +1,152 @@
+[
+  {
+    "name": "HTML",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0022_html_zvqbmo.png",
+    "color": "#FF4500"
+  },
+  {
+    "name": "CSS",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0021_css-3_rnmwh2.png",
+    "color": "#1E90FF"
+  },
+  {
+    "name": "JavaScript",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0020_js_q0vzc6.png",
+    "color": "#FFD700"
+  },
+  {
+    "name": "TypeScript",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0019_typescript_sbbzne.png",
+    "color": "#00BFFF"
+  },
+  {
+    "name": "React",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0018_React_p2snip.png",
+    "color": "#00FFFF"
+  },
+  {
+    "name": "React Query",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0017_React-Query-Icon--Streamline-Svg-Logos_aqkmf9.png",
+    "color": "#FF1493"
+  },
+  {
+    "name": "Vite",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0016_Vite--Streamline-Simple-Icons_sfrpwm.png",
+    "color": "#9400D3"
+  },
+  {
+    "name": "Next.js",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0015_icons8-next.js-480_okijpx.png",
+    "color": "#000000"
+  },
+  {
+    "name": "Express",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0014_Express--Streamline-Simple-Icons_gmaxuv.png",
+    "color": "#333333"
+  },
+  {
+    "name": "Node Js",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0013_Nodedotjs--Streamline-Simple-Icons_ai6dhj.png",
+    "color": "#32CD32"
+  },
+  {
+    "name": "npm",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0012_Npm--Streamline-Simple-Icons_yt5rad.png",
+    "color": "#FF0000"
+  },
+  {
+    "name": "Prisma",
+    "src": "https://www.svgrepo.com/show/373776/light-prisma.svg",
+    "color": "#00FF7F"
+  },
+  {
+    "name": "Socket.io",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0011_Socketdotio--Streamline-Simple-Icons_fombsk.png",
+    "color": "#A9A9A9"
+  },
+  {
+    "name": "Supabase",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0010_Supabase--Streamline-Simple-Icons_i4olzp.png",
+    "color": "#32CD32"
+  },
+  {
+    "name": "PHP",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0009_Php--Streamline-Simple-Icons_cc8ggq.png",
+    "color": "#8A2BE2"
+  },
+  {
+    "name": "Java",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0007_java-seeklogo_ksbpsl.png",
+    "color": "#FF4500"
+  },
+  {
+    "name": "Visual Basic",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0006_VB.NET_Logo.svg_g9dpv4.png",
+    "color": "#4169E1"
+  },
+  {
+    "name": "Python",
+    "src": "https://res.cloudinary.com/diddn2pzb/image/upload/Python-Logo_r333iy.png",
+    "color": "#FFD700"
+  },
+  {
+    "name": "C++",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0005_c-seeklogo_allvjb.png",
+    "color": "#1E90FF"
+  },
+  {
+    "name": "Laravel",
+    "src": "https://res.cloudinary.com/diddn2pzb/image/upload/Laravel-logo_xrmmgo.png",
+    "color": "#FF0000"
+  },
+  {
+    "name": "Tailwind",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0008_Tailwind-Css-Fill--Streamline-Remix-Fill_idqu2x.png",
+    "color": "#00CED1"
+  },
+  {
+    "name": "MySQL",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0004_mysql-seeklogo_o5mcbk.png",
+    "color": "#1E90FF"
+  },
+  {
+    "name": "SQLite",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0003_Layer-5_gsq2p7.png",
+    "color": "#00BFFF"
+  },
+  {
+    "name": "MS SQL",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0002_539026e2-f72a-455b-82c9-f446f9ee2fbe_hjdlwx.png",
+    "color": "#0000FF"
+  },
+  {
+    "name": "PostgreSQL",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0001_postqresql-seeklogo_ajmhty.png",
+    "color": "#4169E1"
+  },
+  {
+    "name": "MongoDB",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/html_0000s_0000_mongodb-seeklogo_jixyab.png",
+    "color": "#00FF00"
+  },
+  {
+    "name": "Bun",
+    "src": "https://res.cloudinary.com/djtsciuwn/image/upload/icon_xl3oqk.svg",
+    "color": "#FF8C69"
+  },
+  {
+    "name": "GSAP",
+    "src": "https://svgstack.com/media/img/gsap-logo-dNe6788698.webp",
+    "color": "#f73998"
+  },
+  {
+    "name": "Shadcn",
+    "src": "https://res.cloudinary.com/diddn2pzb/image/upload/shadcn-ui-seeklogo_qguul7.png",
+    "color": "#5e5e5e"
+  },
+  {
+    "name": "Framer",
+    "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22-20.835%20-20.835%20500%20500%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20id%3D%22Brand-Framer-Motion--Streamline-Tabler%22%20height%3D%22500%22%20width%3D%22500%22%3E%0A%20%20%3Cdesc%3E%0A%20%20%20%20Brand%20Framer%20Motion%20Streamline%20Icon%3A%20https%3A%2F%2Fstreamlinehq.com%0A%20%20%3C%2Fdesc%3E%0A%20%20%3Cpath%20d%3D%22M229.16499999999996%20229.16499999999996%2076.38833333333332%2076.38833333333332v305.5533333333333L381.9416666666666%2076.38833333333332v305.5533333333333l-76.38833333333332%20-76.38833333333332%22%20stroke-width%3D%2241.67%22%3E%3C%2Fpath%3E%0A%20%20%3Cpath%20d%3D%22m381.9416666666666%20229.16499999999996%20-152.77666666666664%20152.77666666666664%20-76.38833333333332%20-76.38833333333332%22%20stroke-width%3D%2241.67%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E",
+    "color": "#ed06f5"
+  }
+]

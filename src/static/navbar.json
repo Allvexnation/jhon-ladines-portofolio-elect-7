@@ -1,0 +1,73 @@
+{
+  "pageTitles": {
+    "home": "Jhon Ladines | Personal Website",
+    "about": "About | Jhon Ladines",
+    "projects": "Projects | Jhon Ladines",
+    "tutorials": "Tutorials | Jhon Ladines",
+    "techstacks": "Tech Stacks | Jhon Ladines",
+    "services": "Services | Jhon Ladines",
+    "dashboard": "Dashboard | Jhon Ladines",
+    "showcase": "Showcase | Jhon Ladines",
+    "chatroom": "Chat Room | Jhon Ladines",
+    "contact": "Contact | Jhon Ladines",
+    "info": "Update Log | Jhon Ladines",
+    "uses": "Uses & Setup | Jhon Ladines",
+    "links": "Links | Jhon Ladines"
+  },
+  "defaultNavbarTabOptions": {
+    "home": true,
+    "about": true,
+    "projects": true,
+    "tutorials": true,
+    "techstacks": false,
+    "services": true,
+    "dashboard": true,
+    "showcase": true,
+    "chatroom": true,
+    "contact": true,
+    "info": true,
+    "uses": true,
+    "links": true
+  },
+  "defaultAuthOptions": {
+    "google": true,
+    "github": true,
+    "discord": true,
+    "facebook": true
+  },
+  "defaultAuthBadgeOptions": {
+    "google": true,
+    "github": true,
+    "discord": true,
+    "facebook": true
+  },
+  "defaultUIControlOptions": {
+    "languageUS": true,
+    "languagePH": true,
+    "themeLightMode": true,
+    "themeDarkMode": true
+  },
+  "defaultSecurityOptions": {
+    "rightClickDisabled": false,
+    "devToolsDisabled": false,
+    "consoleDisabled": false
+  },
+  "defaultDownloadOptions": {
+    "portfolio": true,
+    "resume": true
+  },
+  "themeToggleColors": {
+    "light": {
+      "circleBackground": "bg-[#bdbdbd]",
+      "iconColor": "text-gray-900",
+      "iconHoverColor": "hover:text-gray-800",
+      "shadowColor": "0 2px 8px rgba(0, 0, 0, 0.15)"
+    },
+    "dark": {
+      "circleBackground": "bg-[#363636]",
+      "iconColor": "text-gray-200",
+      "iconHoverColor": "hover:text-gray-200",
+      "shadowColor": "0 2px 8px rgba(0, 0, 0, 0.3)"
+    }
+  }
+}
