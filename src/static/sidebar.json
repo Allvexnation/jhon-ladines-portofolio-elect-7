@@ -1,0 +1,90 @@
+{
+  "primaryNavOrder": [
+    "home",
+    "about",
+    "projects",
+    "tutorials",
+    "dashboard",
+    "chatroom",
+    "services",
+    "contact",
+    "techstacks",
+    "uses",
+    "showcase",
+    "info"
+  ],
+  "navItems": [
+    {
+      "id": "home",
+      "href": "/home",
+      "textKey": "home",
+      "icon": "BiHomeCircle"
+    },
+    {
+      "id": "about",
+      "href": "/about",
+      "textKey": "about",
+      "icon": "BiUser"
+    },
+    {
+      "id": "projects",
+      "href": "/projects",
+      "textKey": "projects",
+      "icon": "PiCardsThreeBold"
+    },
+    {
+      "id": "tutorials",
+      "href": "/tutorials",
+      "textKey": "tutorials",
+      "icon": "LuYoutube"
+    },
+    {
+      "id": "techstacks",
+      "href": "/techstacks",
+      "textKey": "techstacks",
+      "icon": "TbStack2"
+    },
+    {
+      "id": "services",
+      "href": "/services",
+      "textKey": "services",
+      "icon": "PiBriefcaseBold"
+    },
+    {
+      "id": "dashboard",
+      "href": "/dashboard",
+      "textKey": "dashboard",
+      "icon": "BiCategory"
+    },
+    {
+      "id": "showcase",
+      "href": "/showcase",
+      "textKey": "showcase",
+      "icon": "BiPhotoAlbum"
+    },
+    {
+      "id": "chatroom",
+      "href": "/chatroom",
+      "textKey": "chatroom",
+      "icon": "PiChatTeardropDotsBold"
+    },
+    {
+      "id": "contact",
+      "href": "/contact",
+      "textKey": "contact",
+      "icon": "BiBook"
+    },
+    {
+      "id": "info",
+      "href": "/info",
+      "textKey": "info",
+      "icon": "RotateCcw"
+    },
+    {
+      "id": "uses",
+      "href": "/uses",
+      "textKey": "uses",
+      "icon": "Monitor"
+    }
+  ]
+}

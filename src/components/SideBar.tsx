@@ -1,168 +1,40 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CloudSun, CloudMoon, PanelTop, PanelLeft, Menu, X } from 'lucide-react';
-import {
-  BiHomeCircle,
-  BiUser,
-  BiBook,
-  BiMessageRoundedDots,
-  BiPhotoAlbum,
-  BiCategory,
-} from 'react-icons/bi';
-import {
-  PiBriefcaseBold,
-  PiCardsThreeBold,
-  PiChatTeardropDotsBold,
-  PiCodeBold,
-} from 'react-icons/pi';
-import { TbStack2 } from 'react-icons/tb';
-import { LuYoutube } from 'react-icons/lu';
-import { RotateCcw, Monitor, Link, Phone } from 'lucide-react';
-import { useThemeToggle } from '@/utils/theme-toggle';
-import { useLanguageToggle } from '@/utils/toggle-language';
+import { CloudSun, CloudMoon, PanelTop, PanelLeft } from 'lucide-react';
 import type { SideBarProps } from '@/types/components';
+import { useSidebarLogic, PROFILE_IMAGE, VERIFIED_BADGE } from '@/functions/sidebar-logic';
 
-const PROFILE_IMAGE = 'https://res.cloudinary.com/djtsciuwn/image/upload/IMG-JHON_jxdvco.jpg';
-const VERIFIED_BADGE =
-  'https://res.cloudinary.com/diddn2pzb/image/upload/v1760586574/download_8_f4xz89.png';
-
-const SideBar: React.FC<SideBarProps> = ({
-  isDarkMode: externalIsDarkMode,
-  toggleTheme: externalToggleTheme,
-  activeTab: externalActiveTab,
-  setActiveTab: externalSetActiveTab,
-  navLayout: externalNavLayout,
-  setNavLayout: externalSetNavLayout,
-}) => {
-  const router = useRouter();
-  const pathname = usePathname();
-  const { isDarkMode: internalIsDarkMode, toggleTheme: internalToggleTheme } = useThemeToggle();
-  const { lang, toggleLanguage, setLanguage } = useLanguageToggle();
-
-  const isDarkMode = externalIsDarkMode ?? internalIsDarkMode;
-  const toggleTheme = externalToggleTheme ?? internalToggleTheme;
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const [activeTab, setActiveTab] = useState(externalActiveTab || pathname?.slice(1) || 'home');
-  const [navLayout, setNavLayout] = useState(externalNavLayout || 'sidebar');
-
-  // Theme-aware colors
-  const themeColors = {
-    mobile: {
-      background: isDarkMode ? '#0a0a0a' : '#ffffff',
-      menuBackground: isDarkMode ? '#0a0a0a' : '#ffffff',
-    },
-    desktop: {
-      profileBorder: isDarkMode ? '#333333' : '#e5e5e5',
-    },
-  };
-
-  const textPrimary = isDarkMode ? 'text-white' : 'text-black';
-  const textSecondary = isDarkMode ? 'text-gray-400' : 'text-gray-800';
-  const dividerClass = isDarkMode ? 'border-t border-gray-700' : 'border-t border-gray-300';
-  const mobileTopBorderClass = isDarkMode ? 'border-gray-800' : 'border-gray-200';
-  const togglePillBorderClass = isDarkMode ? 'border border-gray-700' : 'border border-gray-300';
-  const controlBtnClass = isDarkMode
-    ? 'w-10 h-10 bg-[#1a1a1a] text-gray-300 rounded-lg hover:bg-gray-800 transition-colors flex items-center justify-center'
-    : 'w-10 h-10 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center';
-
-  const navActiveClass = isDarkMode
-    ? 'bg-[#262626] text-white border-2 border-transparent'
-    : 'bg-gray-100 text-black border-2 border-transparent';
-  const navInactiveClass = isDarkMode
-    ? 'text-gray-400 hover:text-white border-2 border-transparent'
-    : 'text-gray-800 hover:text-black border-2 border-transparent';
-
-  // Translations for nav labels
-  const labels: Record<'en' | 'tl', Record<string, string>> = {
-    en: {
-      home: 'Home',
-      about: 'About',
-      projects: 'Projects',
-      tutorials: 'Tutorials',
-      techstacks: 'Tech Stack',
-      services: 'Services',
-      dashboard: 'Dashboard',
-      showcase: 'Showcase',
-      chatroom: 'Chat Room',
-      contact: 'Contact',
-      info: 'Updates',
-      uses: 'Uses',
-    },
-    tl: {
-      home: 'Bahay',
-      about: 'Tungkol',
-      projects: 'Proyekto',
-      tutorials: 'Tutorial',
-      techstacks: 'Tech Stacks',
-      services: 'Serbisyo',
-      dashboard: 'Tapalodo',
-      showcase: 'Eksibit',
-      chatroom: 'Silid Chat',
-      contact: 'Ugnayan',
-      info: 'Mga Update',
-      uses: 'Gamit',
-    },
-  };
-
-  const currentLabels = labels[lang as keyof typeof labels];
-
-  const allNavItems = [
-    { href: '/home', icon: BiHomeCircle, text: currentLabels.home, id: 'home' },
-    { href: '/about', icon: BiUser, text: currentLabels.about, id: 'about' },
-    { href: '/projects', icon: PiCardsThreeBold, text: currentLabels.projects, id: 'projects' },
-    { href: '/tutorials', icon: LuYoutube, text: currentLabels.tutorials, id: 'tutorials' },
-    { href: '/techstacks', icon: TbStack2, text: currentLabels.techstacks, id: 'techstacks' },
-    { href: '/services', icon: PiBriefcaseBold, text: currentLabels.services, id: 'services' },
-    { href: '/dashboard', icon: BiCategory, text: currentLabels.dashboard, id: 'dashboard' },
-    { href: '/showcase', icon: BiPhotoAlbum, text: currentLabels.showcase, id: 'showcase' },
-    {
-      href: '/chatroom',
-      icon: PiChatTeardropDotsBold,
-      text: currentLabels.chatroom,
-      id: 'chatroom',
-    },
-    { href: '/contact', icon: BiBook, text: currentLabels.contact, id: 'contact' },
-    { href: '/info', icon: RotateCcw, text: currentLabels.info, id: 'info' },
-    { href: '/uses', icon: Monitor, text: currentLabels.uses, id: 'uses' },
-  ];
-
-  const PRIMARY_NAV_ORDER = [
-    'home',
-    'about',
-    'projects',
-    'tutorials',
-    'dashboard',
-    'chatroom',
-    'services',
-    'contact',
-    'techstacks',
-    'uses',
-    'showcase',
-    'info',
-  ];
-  const primaryNavItems = PRIMARY_NAV_ORDER.map((id) =>
-    allNavItems.find((item) => item.id === id)
-  ).filter(Boolean) as typeof allNavItems;
-
-  const handleNavClick = (item: (typeof allNavItems)[0]) => {
-    setActiveTab(item.id);
-    if (externalSetActiveTab) {
-      externalSetActiveTab(item.id);
-    }
-    setIsOpen(false);
-    router.push(item.href);
-  };
-
-  useEffect(() => {
-    setImageLoaded(true);
-    setMounted(true);
-  }, []);
+const SideBar: React.FC<SideBarProps> = (props) => {
+  const {
+    isOpen,
+    setIsOpen,
+    imageLoaded,
+    mounted,
+    activeTab,
+    setActiveTab,
+    navLayout,
+    setNavLayout,
+    isDarkMode,
+    toggleTheme,
+    lang,
+    toggleLanguage,
+    setLanguage,
+    themeColors,
+    textPrimary,
+    textSecondary,
+    dividerClass,
+    mobileTopBorderClass,
+    togglePillBorderClass,
+    controlBtnClass,
+    navActiveClass,
+    navInactiveClass,
+    allNavItems,
+    primaryNavItems,
+    handleNavClick,
+    externalSetNavLayout,
+  } = useSidebarLogic(props);
 
   if (!mounted) {
     return null;
