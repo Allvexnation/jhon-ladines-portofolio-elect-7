@@ -26,7 +26,8 @@ import englishLabels from '@/static/sidebar_english.json';
 import tagalogLabels from '@/static/sidebar_tagalog.json';
 import sidebarConfig from '@/static/sidebar.json';
 
-export const PROFILE_IMAGE = 'https://res.cloudinary.com/djtsciuwn/image/upload/IMG-JHON_jxdvco.jpg';
+export const PROFILE_IMAGE =
+  'https://res.cloudinary.com/djtsciuwn/image/upload/IMG-JHON_jxdvco.jpg';
 export const VERIFIED_BADGE =
   'https://res.cloudinary.com/dbob1wota/image/upload/verified_svtr7d.png';
 
@@ -107,9 +108,9 @@ export const useSidebarLogic = ({
     id: item.id,
   }));
 
-  const primaryNavItems = sidebarConfig.primaryNavOrder.map((id) =>
-    allNavItems.find((item) => item.id === id)
-  ).filter(Boolean) as typeof allNavItems;
+  const primaryNavItems = sidebarConfig.primaryNavOrder
+    .map((id) => allNavItems.find((item) => item.id === id))
+    .filter(Boolean) as typeof allNavItems;
 
   const handleNavClick = (item: (typeof allNavItems)[0]) => {
     setActiveTab(item.id);

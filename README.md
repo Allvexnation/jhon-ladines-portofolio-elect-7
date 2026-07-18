@@ -11,11 +11,13 @@ This portfolio project showcases modern web development practices through a clea
 ## Tech Stack
 
 ### Core Framework
+
 - **Next.js 16.2.10** - React framework with App Router
 - **React 19.2.4** - UI library
 - **TypeScript 5** - Type-safe JavaScript
 
 ### Styling & UI
+
 - **Tailwind CSS 4** - Utility-first CSS framework
 - **shadcn/ui** - Reusable component library built on Radix UI
 - **React Bits** - Advanced React components and patterns
@@ -24,12 +26,14 @@ This portfolio project showcases modern web development practices through a clea
 - **Lucide React** - Icon library
 
 ### Development Tools
+
 - **Bun** - Fast JavaScript package manager and runtime
 - **Prettier 3.9.5** - Code formatting
 - **ESLint 9** - Code linting with Next.js configuration
 - **PostCSS** - CSS transformation
 
 ### Additional Libraries
+
 - **@base-ui/react** - Unstyled React components
 - **class-variance-authority** - Component variant management
 - **cmdk** - Command menu component
@@ -47,6 +51,7 @@ This portfolio project showcases modern web development practices through a clea
 ## Features
 
 ### Core Functionality
+
 - **Responsive Design** - Mobile-first approach with breakpoints for all screen sizes
 - **Dark Mode** - Theme switching with system preference detection
 - **Smooth Animations** - Page transitions and element animations using Framer Motion
@@ -54,6 +59,7 @@ This portfolio project showcases modern web development practices through a clea
 - **TypeScript Support** - Full type safety across the application
 
 ### Portfolio Sections
+
 - **Hero Section** - Introduction with location and status indicators
 - **Skills Display** - Technology showcase with glass-icon components
 - **Projects Showcase** - Interactive project cards with navigation
@@ -64,6 +70,7 @@ This portfolio project showcases modern web development practices through a clea
 - **Services** - Professional services offering
 
 ### UI Components
+
 - **Navigation** - Sidebar navigation with responsive behavior
 - **Cards** - Featured section cards with hover effects
 - **Icons** - Custom glass-icon components for technologies
@@ -115,17 +122,20 @@ portfolio/
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd portfolio
    ```
 
 2. **Install dependencies**
+
    ```bash
    bun install
    ```
 
 3. **Run development server**
+
    ```bash
    bun dev
    ```
@@ -163,6 +173,7 @@ The project uses Prettier with the following configuration:
 ### TypeScript Configuration
 
 TypeScript is configured with:
+
 - Strict mode enabled
 - Path aliases (`@/*` maps to `./src/*`)
 - React JSX transform
@@ -207,6 +218,7 @@ TypeScript is configured with:
 ### Other Platforms
 
 The project can be deployed to any platform supporting Next.js:
+
 - **Netlify** - Use Next.js build plugin
 - **Railway** - Direct deployment
 - **Docker** - Containerize the application
@@ -224,6 +236,7 @@ This creates an optimized production build in the `.next` directory.
 This project serves as a modern implementation of ELECT 7 Basic HTML concepts:
 
 ### HTML Concepts in Modern Frameworks
+
 - **Semantic HTML** - Implemented through Next.js App Router structure
 - **Forms** - Enhanced with React components and validation
 - **Media** - Optimized image and asset handling
@@ -231,6 +244,7 @@ This project serves as a modern implementation of ELECT 7 Basic HTML concepts:
 - **Responsive Design** - Tailwind CSS utility classes
 
 ### Modern Enhancements
+
 - **Component Architecture** - Reusable, composable components
 - **State Management** - React hooks and context
 - **Type Safety** - TypeScript interfaces and types
@@ -240,6 +254,7 @@ This project serves as a modern implementation of ELECT 7 Basic HTML concepts:
 ## Resources
 
 ### Learning Resources
+
 - [Next.js Documentation](https://nextjs.org/docs)
 - [React Documentation](https://react.dev)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs)
@@ -247,6 +262,7 @@ This project serves as a modern implementation of ELECT 7 Basic HTML concepts:
 - [shadcn/ui Documentation](https://ui.shadcn.com)
 
 ### Component Libraries
+
 - [Radix UI](https://www.radix-ui.com)
 - [Framer Motion](https://www.framer.com/motion)
 - [Lucide Icons](https://lucide.dev)

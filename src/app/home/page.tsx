@@ -49,8 +49,8 @@ export default function Home() {
               text={t.greeting}
               speed={5}
               delay={0}
-              color={isDarkMode ? "#b5b5b5" : "#333333"}
-              shineColor={isDarkMode ? "#ffffff" : "#000000"}
+              color={isDarkMode ? '#b5b5b5' : '#333333'}
+              shineColor={isDarkMode ? '#ffffff' : '#000000'}
               spread={120}
               direction="left"
               yoyo={false}

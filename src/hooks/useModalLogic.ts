@@ -4,10 +4,11 @@ import { ShareModalState } from '@/interface/ShareModalState';
 export function useModalLogic(title: string, link: string): ShareModalState {
   const [showShareModal, setShowShareModal] = useState(false);
   const [copyButtonText, setCopyButtonText] = useState('Copy Link');
-  
-  const processedLink = link && !link.includes('://') && !link.startsWith('mailto:') && link.includes('@') 
-    ? `mailto:${link}` 
-    : link;
+
+  const processedLink =
+    link && !link.includes('://') && !link.startsWith('mailto:') && link.includes('@')
+      ? `mailto:${link}`
+      : link;
 
   const handleCopy = async () => {
     try {
@@ -26,7 +27,7 @@ export function useModalLogic(title: string, link: string): ShareModalState {
     const shareData = {
       title: title,
       text: `Check out my ${title} profile`,
-      url: processedLink
+      url: processedLink,
     };
 
     try {

@@ -206,7 +206,7 @@ const SideBar: React.FC<SideBarProps> = (props) => {
               }}
               style={{ willChange: 'transform, opacity' }}
             >
-                  <div className="flex items-center gap-3 mb-4 mt-4">
+              <div className="flex items-center gap-3 mb-4 mt-4">
                 <motion.div
                   className="relative cursor-pointer hover:opacity-80 transition-opacity lg:hidden"
                   onClick={() => {
@@ -269,7 +269,7 @@ const SideBar: React.FC<SideBarProps> = (props) => {
               </div>
 
               <div className="flex flex-wrap items-center gap-2">
-                    <div
+                <div
                   className={`relative flex items-center rounded-full p-0.5 ${togglePillBorderClass} ${isDarkMode ? 'bg-[#1a1a1a]' : 'bg-gray-200'} transition-colors duration-300`}
                 >
                   <div
@@ -308,7 +308,7 @@ const SideBar: React.FC<SideBarProps> = (props) => {
                   </button>
                 </div>
 
-                    <div
+                <div
                   className={`relative flex items-center rounded-full p-0.5 ${togglePillBorderClass} ${isDarkMode ? 'bg-[#1a1a1a]' : 'bg-gray-200'} transition-colors duration-300`}
                 >
                   <div
@@ -394,7 +394,8 @@ const SideBar: React.FC<SideBarProps> = (props) => {
                       xmlns="http://www.w3.org/2000/svg"
                       style={{
                         position: 'absolute',
-                        top: 0, left: 0,
+                        top: 0,
+                        left: 0,
                         width: '100%',
                         height: '100%',
                         borderRadius: '0.5rem',
@@ -402,9 +403,12 @@ const SideBar: React.FC<SideBarProps> = (props) => {
                       }}
                     >
                       <rect
-                        x="1" y="1"
-                        width="calc(100% - 2px)" height="calc(100% - 2px)"
-                        rx="7" ry="7"
+                        x="1"
+                        y="1"
+                        width="calc(100% - 2px)"
+                        height="calc(100% - 2px)"
+                        rx="7"
+                        ry="7"
                         fill="none"
                         stroke={isDarkMode ? '#4b5563' : '#9ca3af'}
                         strokeWidth="1.5"
@@ -419,9 +423,7 @@ const SideBar: React.FC<SideBarProps> = (props) => {
                   )}
                   <item.icon className="w-5 h-5 transition-all duration-500 ease-out group-hover:-rotate-12 group-hover:scale-110" />
                   <span className="text-base font-medium">{item.text}</span>
-                  {activeTab === item.id && (
-                    <ArrowRight className="w-2.5 h-2.5 ml-auto" />
-                  )}
+                  {activeTab === item.id && <ArrowRight className="w-2.5 h-2.5 ml-auto" />}
                 </motion.button>
               ))}
             </nav>
@@ -449,7 +451,7 @@ const SideBar: React.FC<SideBarProps> = (props) => {
               msOverflowStyle: 'none',
             }}
           >
-              <div className="text-center mb-3">
+            <div className="text-center mb-3">
               <div
                 className="relative inline-block mb-3 cursor-pointer hover:opacity-80 transition-opacity"
                 onClick={() => handleNavClick(allNavItems[0])}
@@ -491,7 +493,7 @@ const SideBar: React.FC<SideBarProps> = (props) => {
                 className="flex items-center justify-center gap-1.5"
                 aria-label="Language selector"
               >
-                    <div
+                <div
                   className={`relative flex items-center rounded-full p-0.5 ${togglePillBorderClass} ${isDarkMode ? 'bg-[#1a1a1a]' : 'bg-gray-200'} transition-colors duration-300`}
                 >
                   <div
@@ -530,7 +532,7 @@ const SideBar: React.FC<SideBarProps> = (props) => {
                   </button>
                 </div>
 
-                    <div
+                <div
                   className={`relative flex items-center rounded-full p-0.5 ${togglePillBorderClass} ${isDarkMode ? 'bg-[#1a1a1a]' : 'bg-gray-200'} transition-colors duration-300`}
                 >
                   <div
@@ -618,16 +620,20 @@ const SideBar: React.FC<SideBarProps> = (props) => {
                       xmlns="http://www.w3.org/2000/svg"
                       style={{
                         position: 'absolute',
-                        top: 0, left: 0,
+                        top: 0,
+                        left: 0,
                         width: '100%',
                         height: '100%',
                         overflow: 'visible',
                       }}
                     >
                       <rect
-                        x="1" y="1"
-                        width="calc(100% - 2px)" height="calc(100% - 2px)"
-                        rx="7" ry="7"
+                        x="1"
+                        y="1"
+                        width="calc(100% - 2px)"
+                        height="calc(100% - 2px)"
+                        rx="7"
+                        ry="7"
                         fill="none"
                         stroke={isDarkMode ? '#4b5563' : '#9ca3af'}
                         strokeWidth="1.5"
@@ -642,9 +648,7 @@ const SideBar: React.FC<SideBarProps> = (props) => {
                   )}
                   <item.icon className="w-5 h-5 transition-all duration-500 ease-out group-hover:-rotate-12 group-hover:scale-110" />
                   <span className="text-base font-medium">{item.text}</span>
-                  {activeTab === item.id && (
-                    <ArrowRight className="w-5 h-5 ml-auto" />
-                  )}
+                  {activeTab === item.id && <ArrowRight className="w-5 h-5 ml-auto" />}
                 </button>
               ))}
             </nav>

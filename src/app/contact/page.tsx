@@ -54,9 +54,9 @@ export default function ContactPage() {
   }
 
   return (
-    <motion.section 
+    <motion.section
       ref={sectionRef}
-      id="contact" 
+      id="contact"
       className={`relative pt-8 pb-4 lg:pt-7 lg:pb-7 px-4 sm:px-6 lg:px-8 transition-all duration-700 ease-out ${pageAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
       variants={fadeInUpVariants}
       initial="hidden"
@@ -64,16 +64,17 @@ export default function ContactPage() {
     >
       <div className="relative max-w-[1400px] mx-auto">
         <motion.div className="mb-5" variants={itemVariants}>
-          <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-2xl font-bold mb-3" style={{ color: isDarkMode ? '#ffffff' : '#000000' }}>
+          <h2
+            className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-2xl font-bold mb-3"
+            style={{ color: isDarkMode ? '#ffffff' : '#000000' }}
+          >
             {t.pageHeader.title}
           </h2>
-          <p style={{ color: isDarkMode ? '#9ca3af' : '#6b7280' }}>
-            {t.pageHeader.description}
-          </p>
+          <p style={{ color: isDarkMode ? '#9ca3af' : '#6b7280' }}>{t.pageHeader.description}</p>
         </motion.div>
 
-        <motion.div 
-          className="border-t mb-5 sm:mb-8 border-dashed" 
+        <motion.div
+          className="border-t mb-5 sm:mb-8 border-dashed"
           style={{ borderColor: themeColors.border }}
           variants={itemVariants}
         ></motion.div>
@@ -89,12 +90,12 @@ export default function ContactPage() {
                 activeTab === tab.id
                   ? {
                       backgroundColor: isDarkMode ? '#ffffff' : '#000000',
-                      color: isDarkMode ? '#000000' : '#ffffff'
+                      color: isDarkMode ? '#000000' : '#ffffff',
                     }
                   : {
                       backgroundColor: 'transparent',
                       color: isDarkMode ? '#9ca3af' : '#6b7280',
-                      border: `1px solid ${themeColors.border}`
+                      border: `1px solid ${themeColors.border}`,
                     }
               }
               onMouseEnter={(e) => {
@@ -121,19 +122,28 @@ export default function ContactPage() {
             isDarkMode={isDarkMode}
             itemVariants={itemVariants}
             staggerVariants={staggerVariants}
-            title={t.tabs.find((tab: any) => tab.id === 'social')?.title || 'Find me on social media'}
+            title={
+              t.tabs.find((tab: any) => tab.id === 'social')?.title || 'Find me on social media'
+            }
           />
         )}
 
         {activeTab === 'contact' && (
           <motion.div className="mt-0" variants={itemVariants}>
-            <h3 className="text-lg sm:text-xl font-normal mb-4 sm:mb-6" style={{ color: isDarkMode ? '#ffffff' : '#000000' }}>
+            <h3
+              className="text-lg sm:text-xl font-normal mb-4 sm:mb-6"
+              style={{ color: isDarkMode ? '#ffffff' : '#000000' }}
+            >
               {t.tabs.find((tab: any) => tab.id === 'contact')?.title}
             </h3>
             <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1" style={{ color: isDarkMode ? '#ffffff' : '#000000' }}>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium mb-1"
+                    style={{ color: isDarkMode ? '#ffffff' : '#000000' }}
+                  >
                     {t.contactForm.namePlaceholder}
                   </label>
                   <Input
@@ -146,7 +156,11 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1" style={{ color: isDarkMode ? '#ffffff' : '#000000' }}>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-1"
+                    style={{ color: isDarkMode ? '#ffffff' : '#000000' }}
+                  >
                     {t.contactForm.emailPlaceholder}
                   </label>
                   <Input
@@ -160,7 +174,11 @@ export default function ContactPage() {
                 </div>
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-1" style={{ color: isDarkMode ? '#ffffff' : '#000000' }}>
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium mb-1"
+                  style={{ color: isDarkMode ? '#ffffff' : '#000000' }}
+                >
                   {t.contactForm.subjectPlaceholder}
                 </label>
                 <Input
@@ -173,7 +191,11 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1" style={{ color: isDarkMode ? '#ffffff' : '#000000' }}>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-1"
+                  style={{ color: isDarkMode ? '#ffffff' : '#000000' }}
+                >
                   {t.contactForm.messagePlaceholder}
                 </label>
                 <Textarea
@@ -195,11 +217,11 @@ export default function ContactPage() {
                     ? {
                         backgroundColor: isDarkMode ? '#374151' : '#d1d5db',
                         color: isDarkMode ? '#9ca3af' : '#6b7280',
-                        cursor: 'not-allowed'
+                        cursor: 'not-allowed',
                       }
                     : {
                         backgroundColor: isDarkMode ? '#ffffff' : '#000000',
-                        color: isDarkMode ? '#000000' : '#ffffff'
+                        color: isDarkMode ? '#000000' : '#ffffff',
                       }
                 }
                 onMouseEnter={(e) => {
@@ -225,13 +247,17 @@ export default function ContactPage() {
           <DialogHeader>
             <div className="flex items-center gap-3 mb-2">
               {submitStatus === 'success' ? (
-                <CheckCircle2 className="w-6 h-6" style={{ color: isDarkMode ? '#ffffff' : '#000000' }} />
+                <CheckCircle2
+                  className="w-6 h-6"
+                  style={{ color: isDarkMode ? '#ffffff' : '#000000' }}
+                />
               ) : (
-                <XCircle className="w-6 h-6" style={{ color: isDarkMode ? '#ffffff' : '#000000' }} />
+                <XCircle
+                  className="w-6 h-6"
+                  style={{ color: isDarkMode ? '#ffffff' : '#000000' }}
+                />
               )}
-              <DialogTitle>
-                {submitStatus === 'success' ? 'Success' : 'Error'}
-              </DialogTitle>
+              <DialogTitle>{submitStatus === 'success' ? 'Success' : 'Error'}</DialogTitle>
             </div>
             <DialogDescription>
               {submitStatus === 'success'

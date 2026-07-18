@@ -11,8 +11,7 @@ export function useLanguageToggle() {
         if (saved === 'en' || saved === 'tl') {
           return saved;
         }
-      } catch (_) {
-      }
+      } catch (_) {}
     }
     return 'en';
   });
@@ -23,8 +22,7 @@ export function useLanguageToggle() {
       if (typeof window !== 'undefined') {
         try {
           localStorage.setItem('lang', newLang);
-        } catch (_) {
-        }
+        } catch (_) {}
       }
       return newLang;
     });
@@ -35,8 +33,7 @@ export function useLanguageToggle() {
       if (typeof window !== 'undefined') {
         try {
           localStorage.setItem('lang', newLang);
-        } catch (_) {
-        }
+        } catch (_) {}
       }
       return newLang;
     });
@@ -50,8 +47,7 @@ export function useLanguageToggle() {
           if (newLang === 'en' || newLang === 'tl') {
             setLang(newLang);
           }
-        } catch (_) {
-        }
+        } catch (_) {}
       }
     };
 

@@ -7,10 +7,7 @@ export async function POST(request: NextRequest) {
     const { name, email, subject, message } = body;
 
     if (!name || !email || !subject || !message) {
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
     const senderName = process.env.SENDER_NAME;
@@ -18,10 +15,7 @@ export async function POST(request: NextRequest) {
     const brevoApiKey = process.env.BREVO_API_KEY;
 
     if (!senderName || !senderEmail || !brevoApiKey) {
-      return NextResponse.json(
-        { error: 'Server configuration error' },
-        { status: 500 }
-      );
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
     }
 
     const htmlContent = generateEmailTemplate({ name, email, subject, message });
@@ -48,7 +42,7 @@ export async function POST(request: NextRequest) {
     const brevoResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
       method: 'POST',
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json',
         'api-key': brevoApiKey,
       },
@@ -58,21 +52,14 @@ export async function POST(request: NextRequest) {
     if (!brevoResponse.ok) {
       const errorData = await brevoResponse.json();
       console.error('Brevo API error:', errorData);
-      return NextResponse.json(
-        { error: 'Failed to send email' },
-        { status: 500 }
-      );
+      return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
     }
 
     const data = await brevoResponse.json();
 
     return NextResponse.json({ success: true, messageId: data.messageId }, { status: 200 });
-
   } catch (error) {
     console.error('Error sending email:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

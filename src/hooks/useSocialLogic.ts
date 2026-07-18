@@ -12,13 +12,13 @@ export function useSocialLogic() {
     const loadSocials = async () => {
       try {
         const iconMap: Record<string, any> = {
-          'Gmail': BiEnvelope,
-          'Facebook': FaFacebook,
-          'Instagram': FaInstagram,
-          'GitHub': FaGithub,
-          'Outlook': BiEnvelope,
-          'TikTok': FaTiktok,
-          'LinkedIn': FaLinkedin,
+          Gmail: BiEnvelope,
+          Facebook: FaFacebook,
+          Instagram: FaInstagram,
+          GitHub: FaGithub,
+          Outlook: BiEnvelope,
+          TikTok: FaTiktok,
+          LinkedIn: FaLinkedin,
         };
 
         const socialsWithIcons: SocialItem[] = socialsData.map((social: any) => ({

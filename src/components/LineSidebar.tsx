@@ -25,9 +25,9 @@ export interface LineSidebarProps {
 }
 
 const FALLOFF_CURVES: Record<Falloff, (p: number) => number> = {
-  linear: p => p,
-  smooth: p => p * p * (3 - 2 * p),
-  sharp: p => p * p * p
+  linear: (p) => p,
+  smooth: (p) => p * p * (3 - 2 * p),
+  sharp: (p) => p * p * p,
 };
 
 const DEFAULT_ITEMS = [
@@ -42,7 +42,7 @@ const DEFAULT_ITEMS = [
   'Community',
   'Resources',
   'Documentation',
-  'Support'
+  'Support',
 ];
 
 const LineSidebar = ({
@@ -64,7 +64,7 @@ const LineSidebar = ({
   smoothing = 100,
   defaultActive = null,
   onItemClick,
-  className = ''
+  className = '',
 }: LineSidebarProps) => {
   const listRef = useRef<HTMLUListElement>(null);
   const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
@@ -156,7 +156,7 @@ const LineSidebar = ({
   const tickClass = showMarker
     ? `after:absolute after:left-[calc(-1*var(--marker-length)-var(--marker-gap))] after:top-[calc(100%+var(--item-gap)/2)] after:h-px after:opacity-50 after:content-[''] last:after:content-none after:[background-color:var(--marker-color)] after:[width:calc(var(--marker-length)*var(--tick-scale))] ${
         scaleTick
-          ? "after:origin-left after:[transform:translateY(-50%)_scaleX(calc(0.7+var(--effect,0)*0.6))]"
+          ? 'after:origin-left after:[transform:translateY(-50%)_scaleX(calc(0.7+var(--effect,0)*0.6))]'
           : 'after:-translate-y-1/2'
       }`
     : '';
@@ -175,7 +175,7 @@ const LineSidebar = ({
           '--max-shift': `${maxShift}px`,
           '--item-gap': `${itemGap}px`,
           '--font-size': `${fontSize}rem`,
-          '--smoothing': `${smoothing}ms`
+          '--smoothing': `${smoothing}ms`,
         } as CSSProperties
       }
     >
@@ -188,7 +188,7 @@ const LineSidebar = ({
         {items.map((label, index) => (
           <li
             key={`${label}-${index}`}
-            ref={el => {
+            ref={(el) => {
               itemRefs.current[index] = el;
             }}
             aria-current={activeIndex === index ? 'true' : undefined}

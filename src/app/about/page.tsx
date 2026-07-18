@@ -38,9 +38,7 @@ export default function About() {
           >
             {t.pageHeader.title}
           </h1>
-          <p
-            className={`text-sm sm:text-base ${isDarkMode ? 'text-gray-400' : 'text-gray-800'}`}
-          >
+          <p className={`text-sm sm:text-base ${isDarkMode ? 'text-gray-400' : 'text-gray-800'}`}>
             {t.pageHeader.description}
           </p>
         </div>
@@ -80,7 +78,9 @@ export default function About() {
           <div className="mt-8 flex items-center gap-4">
             <div className="flex-shrink-0">
               <img
-                src={isDarkMode ? t.aboutIntro.signature.logoDark : t.aboutIntro.signature.logoLight}
+                src={
+                  isDarkMode ? t.aboutIntro.signature.logoDark : t.aboutIntro.signature.logoLight
+                }
                 alt="Jhon Logo"
                 className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
               />
@@ -124,7 +124,11 @@ export default function About() {
               <div
                 key={index}
                 className="rounded-2xl p-1.5 transition-all"
-                style={{ borderWidth: '3px', borderStyle: 'solid', borderColor: themeColors.border }}
+                style={{
+                  borderWidth: '3px',
+                  borderStyle: 'solid',
+                  borderColor: themeColors.border,
+                }}
               >
                 <div
                   className="rounded-xl p-4 sm:p-6"
@@ -221,7 +225,11 @@ export default function About() {
               <div
                 key={index}
                 className="rounded-2xl p-1.5 transition-all"
-                style={{ borderWidth: '3px', borderStyle: 'solid', borderColor: themeColors.border }}
+                style={{
+                  borderWidth: '3px',
+                  borderStyle: 'solid',
+                  borderColor: themeColors.border,
+                }}
               >
                 <div
                   className="rounded-xl p-4 sm:p-6"
@@ -299,7 +307,11 @@ export default function About() {
               <div
                 key={index}
                 className="rounded-2xl p-1.5 transition-all h-full"
-                style={{ borderWidth: '3px', borderStyle: 'solid', borderColor: themeColors.border }}
+                style={{
+                  borderWidth: '3px',
+                  borderStyle: 'solid',
+                  borderColor: themeColors.border,
+                }}
               >
                 <div
                   className="rounded-xl p-4 sm:p-6 h-full flex flex-col"
@@ -307,9 +319,13 @@ export default function About() {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     {device.icon === 'Laptop' ? (
-                      <Laptop className={`w-6 h-6 ${isDarkMode ? 'text-gray-400' : 'text-black'}`} />
+                      <Laptop
+                        className={`w-6 h-6 ${isDarkMode ? 'text-gray-400' : 'text-black'}`}
+                      />
                     ) : (
-                      <Monitor className={`w-6 h-6 ${isDarkMode ? 'text-gray-400' : 'text-black'}`} />
+                      <Monitor
+                        className={`w-6 h-6 ${isDarkMode ? 'text-gray-400' : 'text-black'}`}
+                      />
                     )}
                     <h3
                       className={`text-base font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}
@@ -319,10 +335,7 @@ export default function About() {
                   </div>
                   <div className="space-y-2 flex-1">
                     {device.specs.map((spec: any, idx: number) => (
-                      <div
-                        key={idx}
-                        className="flex items-start gap-3"
-                      >
+                      <div key={idx} className="flex items-start gap-3">
                         <span
                           className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} w-[140px] flex-shrink-0`}
                         >

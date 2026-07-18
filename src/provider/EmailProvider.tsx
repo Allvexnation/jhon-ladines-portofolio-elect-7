@@ -16,11 +16,7 @@ const EmailContext = createContext<EmailContextType | undefined>(undefined);
 export function EmailProvider({ children }: { children: ReactNode }) {
   const emailLogic = useEmailLogic();
 
-  return (
-    <EmailContext.Provider value={emailLogic}>
-      {children}
-    </EmailContext.Provider>
-  );
+  return <EmailContext.Provider value={emailLogic}>{children}</EmailContext.Provider>;
 }
 
 export function useEmail() {
