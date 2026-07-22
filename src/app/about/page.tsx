@@ -62,7 +62,7 @@ export default function About() {
       }
     >
       <main className="max-w-[1400px] mx-auto">
-        <header className="mb-6 animate-fadeInUp animate-stagger-1">
+        <header className="mb-6">
           <h1
             className={`text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-black'} mb-3`}
           >
@@ -73,9 +73,9 @@ export default function About() {
           </p>
         </header>
 
-        <hr className={`mb-8 animate-fadeInUp animate-stagger-2 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
+        <hr className={`mb-8 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
 
-        <section className="mb-12 animate-fadeInUp animate-stagger-3">
+        <section className="mb-12">
           <div className="space-y-4">
             {t.aboutIntro.paragraphs.map((paragraph: any, index: number) => {
               if (typeof paragraph === 'object' && paragraph.text) {
@@ -124,9 +124,9 @@ export default function About() {
           </footer>
         </section>
 
-        <hr className={`mb-12 animate-fadeInUp animate-stagger-4 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
+        <hr className={`mb-12 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
 
-        <section className="mb-12 animate-fadeInUp animate-stagger-5">
+        <section className="mb-12">
           <div className="flex flex-col gap-1.5 mb-5">
             <h2 className="flex items-center gap-3">
               <User
@@ -235,9 +235,9 @@ export default function About() {
           </div>
         </section>
 
-        <hr className={`mb-12 animate-fadeInUp animate-stagger-6 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
+        <hr className={`mb-12 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
 
-        <section className="mb-12 animate-fadeInUp animate-stagger-7">
+        <section className="mb-12">
           <div className="flex flex-col gap-1.5 mb-5">
             <h2 className="flex items-center gap-3">
               <GraduationCap
@@ -330,9 +330,9 @@ export default function About() {
           </div>
         </section>
 
-        <hr className={`mb-12 animate-fadeInUp animate-stagger-8 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
+        <hr className={`mb-12 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
 
-        <section className="mb-12 animate-fadeInUp animate-stagger-9">
+        <section className="mb-12">
           <div className="flex flex-col gap-1.5 mb-5">
             <h2 className="flex items-center gap-3">
               <Monitor

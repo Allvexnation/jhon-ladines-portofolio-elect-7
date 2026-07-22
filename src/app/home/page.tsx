@@ -41,7 +41,7 @@ export default function Home() {
       }
     >
       <main className="max-w-[1400px] mx-auto">
-        <header className="mb-12 animate-fadeInUp animate-stagger-1">
+        <header className="mb-12">
           <h1
             className={`text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-2xl font-bold mb-4 break-words`}
           >
@@ -83,9 +83,9 @@ export default function Home() {
           </p>
         </header>
 
-        <hr className={`mb-12 animate-fadeInUp animate-stagger-2 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
+        <hr className={`mb-12 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
 
-        <section className="mb-12 animate-fadeInUp animate-stagger-3">
+        <section className="mb-12">
           <div className="flex flex-col gap-1.5 mb-5">
             <h2 className="flex items-center gap-3">
               <PiCodeBold
@@ -112,9 +112,9 @@ export default function Home() {
           />
         </section>
 
-        <hr className={`mb-12 animate-fadeInUp animate-stagger-4 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
+        <hr className={`mb-12 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`} />
 
-        <section className="mb-12 animate-fadeInUp animate-stagger-5">
+        <section className="mb-12">
           <div className="flex flex-col gap-1.5 mb-5">
             <h2 className="flex items-center gap-3">
               <PiCardsThreeBold
